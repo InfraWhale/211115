@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+    // const obj = {name:"Hong Gil Dong", age:16, address:"한 양"}
+    //
+    // localStorage.setItem("sample", obj) // 문자열만 들어갈 수 있으므로 이렇게 하면 안됨
+    //
+    // // 즉 객체를 JSON(문자열)로 바꿔야 함
+
+    const obj = {name:"Hong Gil Dong", age:16, address:"한 양"}
+
+    const jsonStr = JSON.stringify(obj) //JSON 형태로 변경
+
+    console.log(jsonStr)
+
+    localStorage.setItem("sample", jsonStr)
+
+    const arr = [
+        {name:'샤프', price: 3000},
+        {name:'볼펜', price: 1500}
+    ]
+
+    localStorage.setItem("products", JSON.stringify(arr))
+
+</script>
+
+
+</body>
+</html>
